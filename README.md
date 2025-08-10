@@ -5,12 +5,16 @@ This is a **solution** for Challenge 1a of the Adobe India Hackathon 2025. The c
 
 ### Build Command
 ```bash
-docker build --platform linux/amd64 -t <reponame.someidentifier> .
+docker build --platform linux/amd64 -t <mysolutionname.someidentifier> .
 ```
 
 ### Run Command
 ```bash
-docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output/repoidentifier/:/app/output --network none <reponame.someidentifier>
+docker run --rm `
+  -v ${PWD}/input:/app/input `
+  -v ${PWD}/output:/app/output `
+  --network none `
+  mysolutionname:somerandomidentifier
 ```
 
 ### Critical Constraints
